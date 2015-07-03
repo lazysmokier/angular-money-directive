@@ -127,7 +127,7 @@ angular.module('fiestah.money', [])
       });
 
       ngModelCtrl.$parsers.push(function (value) {
-        if (value) {
+        if (value || value === 0) {
           // Save with rounded value
           lastValidValue = round(value);
 
